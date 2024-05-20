@@ -28,3 +28,28 @@ Apache Kafka is a distributed event streaming platform capable of handling trill
    wget https://downloads.apache.org/kafka/3.7.0/kafka_2.13-3.7.0.tgz
    tar -xzf kafka_2.13-3.7.0.tgz
    cd kafka_2.13-3.7.0
+
+1. **Start Zookeeper**
+   Kafka uses Zookeeper to manage its cluster. Start the Zookeeper server:
+   
+   bin\windows\zookeeper-server-start.bat config\zookeeper.properties
+
+2. **Start Kafka Server**
+   Once Zookeeper is running, start the Kafka server:
+
+   bin\windows\kafka-server-start.bat config\server.properties
+   
+3. **Create a Topic**
+   Create a topic named 'test' with a replication factor of 1 and 1 partition:
+
+   bin\windows\kafka-topics.bat --create --topic test --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1
+
+4. **Send Messages**
+   Use the Kafka producer to send messages to the 'test' topic:
+
+   bin\windows\kafka-console-producer.bat --topic test --bootstrap-server localhost:9092
+
+5. **Consume Messages**
+   Use the Kafka consumer to read messages from the 'test' topic:
+
+   bin\windows\kafka-console-consumer.bat --topic test --from-beginning --bootstrap-server localhost:9092
