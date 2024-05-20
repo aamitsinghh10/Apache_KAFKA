@@ -64,6 +64,10 @@ Apache Kafka is a distributed event streaming platform capable of handling trill
    
    bin\windows\kafka-console-producer.bat --topic stock-ticks --broker-list localhost:9092 < ..\data\sample1.csv
 
+9. **Dumping the Log**
+
+   bin\windows\kafka-dump-log.bat --files c:\tmp\kafka-logs-0\stock-ticks-1\0000000000000000000.log
+
 ## Directory Structure
 
 bin/: Contains the scripts for starting Kafka and Zookeeper.
