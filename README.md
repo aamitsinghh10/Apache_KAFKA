@@ -67,11 +67,15 @@ Apache Kafka is a distributed event streaming platform capable of handling trill
 ## Directory Structure
 
 bin/: Contains the scripts for starting Kafka and Zookeeper.
+
 config/: Contains configuration files for Kafka and Zookeeper.
+
 libs/: Contains the libraries required by Kafka.
+
 logs/: Default directory for logs.
 
 ## Configuration
 
 Zookeeper: Configured in config/zookeeper.properties.
+
 Kafka Broker: Configured in config/server.properties.
