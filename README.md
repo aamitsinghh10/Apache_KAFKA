@@ -53,3 +53,7 @@ Apache Kafka is a distributed event streaming platform capable of handling trill
    Use the Kafka consumer to read messages from the 'test' topic:
 
    bin\windows\kafka-console-consumer.bat --topic test --from-beginning --bootstrap-server localhost:9092
+
+6. **Consumer Groups**
+
+   bin\windows\kafka-console-consumer.bat --booststrap-server localhost:9092 --topic stock-ticks --from-beginning --group group1
