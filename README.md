@@ -55,5 +55,23 @@ Apache Kafka is a distributed event streaming platform capable of handling trill
    bin\windows\kafka-console-consumer.bat --topic test --from-beginning --bootstrap-server localhost:9092
 
 6. **Consumer Groups**
-
+   To consume messages from the 'stock-ticks' topic as part of a consumer group (group1):
+   
    bin\windows\kafka-console-consumer.bat --booststrap-server localhost:9092 --topic stock-ticks --from-beginning --group group1
+
+8. **Produce Messages from a File**
+   To send messages from a file (sample1.csv) to the 'stock-ticks' topic using the Kafka producer:
+   
+   bin\windows\kafka-console-producer.bat --topic stock-ticks --broker-list localhost:9092 < ..\data\sample1.csv
+
+## Directory Structure
+
+bin/: Contains the scripts for starting Kafka and Zookeeper.
+config/: Contains configuration files for Kafka and Zookeeper.
+libs/: Contains the libraries required by Kafka.
+logs/: Default directory for logs.
+
+## Configuration
+
+Zookeeper: Configured in config/zookeeper.properties.
+Kafka Broker: Configured in config/server.properties.
