@@ -12,4 +12,10 @@ public class KafkaTopicConfig {
         //return TopicBuilder.name("Kafka-Topics").partitions(10).build();
         return TopicBuilder.name("Kafka-Topics").build();//here using by default partitions
     }
+
+    @Bean
+    public NewTopic KafkaTopicsJson(){
+        //return TopicBuilder.name("Kafka-Topics").partitions(10).build();
+        return TopicBuilder.name("Kafka-Topics-Json").build();//here using by default partitions
+    }
 }
